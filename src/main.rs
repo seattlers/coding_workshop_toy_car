@@ -13,19 +13,17 @@ clippy::option_unwrap_used, clippy::result_unwrap_used,)]
 //#![warn(clippy::cargo, clippy::restriction, missing_docs, warnings)]
 //#![deny(warnings)]
 
-mod args;
 mod consts;
 mod error;
-mod foo;
+mod motor;
 
 use std::result::Result as StdResult;
-use structopt::StructOpt;
-pub use {args::Args, consts::*, error::Error};
-pub use foo::Foo;
+pub use {consts::*, error::Error};
+pub use motor::Motor;
 
 pub type Result<T> = StdResult<T, Error>;
 
 fn main() -> Result<()> {
-    let _args = Args::from_args();
+    println!("Hi");
     Ok(())
 }

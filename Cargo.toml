@@ -11,11 +11,10 @@ version = "0.1.0"
 
 [dependencies]
 derive_more = "*"
-structopt = "*"
+rppal = { git = "https://github.com/golemparts/rppal.git", features = ["hal"] }
 
 [dev-dependencies]
 pretty_assertions = "*"
-
 [profile.dev]
 codegen-units = 1
 debug = true
